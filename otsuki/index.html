@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>idoulog</title>
+        <link rel="stylesheet" href="/pstyle.css">
+    </head>
+
+    <body>
+        <!-- 可変ゾーン ↓ -->
+        <img id="logs" height="100%" loading="lazy" src="(2).jpg" onclick="randLog()">
+
+        <script>
+            let len = 16; // !
+
+            function randLog() {
+                let img = document.getElementById("logs");
+                let r = Math.floor(Math.random() * len) + 1;
+                console.log(r);
+        
+                img.src = "(" + r + ").JPG"
+            }
+        </script>
+
+        <div id="list">
+            <!-- 可変ゾーン ↓ -->
+            <a class="places" href="/otsuki">otsuki</a>
+            <a class="places" href="/arashiyama">arashiyama</a>
+            <br>
+            <a class="places" id="torikeshi" onclick="mono()">C</a>
+        </div>
+    </body>
+
+    <script>
+        let bw = document.getElementById("logs");
+        let over = document.getElementById("torikeshi");
+        let n = 0;
+
+        function mono() {
+            n = n + 1;
+            if (n % 2 == 0) {
+                bw.classList.remove("mono");
+                over.classList.remove("mono");
+            } else {
+                bw.classList.add("mono");
+                over.classList.add("mono");
+            }
+        }
+    </script>
+
+</html>
