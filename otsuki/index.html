@@ -16,13 +16,14 @@
 
         <script>
             let len = 16; // !
+            let format = ".jpg" // !
 
             function randLog() {
                 let img = document.getElementById("logs");
                 let r = Math.floor(Math.random() * len) + 1;
                 console.log(r);
         
-                img.src = "(" + r + ").JPG"
+                img.src = "(" + r + ")" + format;
             }
         </script>
 
