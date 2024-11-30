@@ -1,0 +1,55 @@
+@font-face {
+    font-family: unifontjp;
+    src: url(unifont_jp.woff2);
+}
+
+html
+{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    height: 100%;
+    scale: 70%;
+}
+
+body
+{
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+#logs
+{
+    display: flex;
+    cursor: pointer;
+
+    scale: 50%;
+    width: 100%;
+}
+
+#list
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+}
+
+.places
+{
+    font-family: unifontjp;
+    font-size: 14pt;
+    text-decoration: none;
+    cursor: pointer;
+    color: #909090;
+}
+.places:visited { color: #909090; }
+.places:hover { color: #303030; }
+
+.mono
+{
+    filter: grayscale(100%);
+    text-decoration: line-through;
+}
