@@ -11,7 +11,6 @@ html
     background: #FFFFFF;
 
     height: 100%;
-    scale: 70%;
 }
 
 body
@@ -19,6 +18,7 @@ body
     display: flex;
     align-items: center;
     user-select: none;
+    scale: 70%;
 }
 
 #logs
