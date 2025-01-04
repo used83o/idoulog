@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>idoulog</title>
+        <link rel="stylesheet" href="/pstyle.css">
+    </head>
+
+    <body>
+        <!-- 可変ゾーン ↓ -->
+        <img id="logs" height="100%" loading="eager" src="(17).JPG" onclick="randLog()">
+
+        <script>console.log("Design Reference : saqum.com")</script>
+        <script>
+            let len = 22; // !
+            let format = ".JPG" // !
+
+            function randLog() {
+                let img = document.getElementById("logs");
+                let r = Math.floor(Math.random() * len) + 1;
+                console.log(r);
+        
+                img.src = "(" + r + ")" + format;
+            }
+        </script>
+
+        <div id="list">
+            <!-- 可変ゾーン ↓ -->
+            <a class="places" href="/otsuki">otsuki</a>
+            <a class="places" href="/arashiyama">arashiyama</a>
+            <a class="places" href="/250101">250101</a>
+            <br>
+            <a class="places" id="torikeshi" onclick="mono()">C</a>
+        </div>
+    </body>
+
+    <script>
+        let bw = document.getElementById("logs");
+        let over = document.getElementById("torikeshi");
+        let n = 0;
+
+        function mono() {
+            n = n + 1;
+            if (n % 2 == 0) {
+                bw.classList.remove("mono");
+                over.classList.remove("mono");
+            } else {
+                bw.classList.add("mono");
+                over.classList.add("mono");
+            }
+        }
+    </script>
+
+</html>
