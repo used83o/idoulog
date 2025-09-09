@@ -12,19 +12,33 @@
 
     <body>
         <!-- 可変ゾーン ↓ -->
-        <img id="logs" height="100%" loading="eager" src="(3).JPG" onclick="randLog()">
+        <img id="logs" height="100%" loading="eager" src="/placehold.png" onclick="randLog()">
+        <script>
+        window.onload = function() {
+            let cover = document.getElementById("logs");
+            cover.src = "(3).JPG" // !
+        }
+        </script>
 
         <script>console.log("Design Reference : saqum.com")</script>
         <script>
             let len = 7; // !
             let format = ".JPG" // !
+            let rpast;
 
             function randLog() {
                 let img = document.getElementById("logs");
                 let r = Math.floor(Math.random() * len) + 1;
+
+                while (r == rpast) {
+                    r = Math.floor(Math.random() * len) + 1;
+                    console.log("確変");
+                }
+
                 console.log(r);
         
                 img.src = "(" + r + ")" + format;
+                rpast = r;
             }
         </script>
 
