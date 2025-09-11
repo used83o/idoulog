@@ -11,7 +11,13 @@
     </head>
 
     <body>
-        <img id="logs" height="100%" loading="eager" src="idou.JPG" title="⏩">
+        <img id="logs" height="100%" loading="eager" src="placehold.png" title="⏩">
+        <script>
+        window.onload = function() {
+            let cover = document.getElementById("logs");
+            cover.src = "idou.JPG" // !
+        }
+        </script>
 
         <script>console.log("Design Reference : saqum.com")</script>
         <div id="list">
@@ -42,5 +48,6 @@
             }
         }
     </script>
+
 
 </html>
